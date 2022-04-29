@@ -2,7 +2,6 @@ package testcases;
 
 import base.TestBase;
 import org.testng.Assert;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import pages.HomePage;
@@ -32,13 +31,13 @@ public class TestCase1 extends TestBase implements TestDataImpactGuru {
     public void validatePageTitle() throws InterruptedException {
         Assert.assertTrue(homePage.getTitle().contains(title));
         Thread.sleep(5000);
+
     }
 
     @Test(priority = 2)
     public void clickFundRaiser() throws IOException, InterruptedException {
         startAFundRaiser = homePage.clickOnFundRaiser();
         Thread.sleep(5000);
-
 
         startAFundRaiser.selectCause(cause);
 
