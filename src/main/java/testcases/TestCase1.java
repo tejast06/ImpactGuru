@@ -1,8 +1,10 @@
 package testcases;
 
 import base.TestBase;
+import listeners.CustomListeners;
 import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import pages.HomePage;
 import pages.StartAFundRaiser;
@@ -10,6 +12,7 @@ import testdata.TestDataImpactGuru;
 
 import java.io.IOException;
 
+@Listeners(CustomListeners.class)
 public class TestCase1 extends TestBase implements TestDataImpactGuru {
 
     public HomePage homePage;

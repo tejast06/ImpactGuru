@@ -5,10 +5,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.Select;
 
 import java.io.IOException;
-import java.util.List;
 
 public class StartAFundRaiser extends TestBase {
 
@@ -39,7 +37,7 @@ public class StartAFundRaiser extends TestBase {
 
     public void selectCause(String cause) throws InterruptedException {
 
-        driver.findElement(By.xpath("//div[text()='Medical']")).click();
+        driver.findElement(By.xpath("//div[text()='Medical]'")).click();
 
         driver.findElement(By.xpath("//div[text()='"+cause+"']")).click();
     }

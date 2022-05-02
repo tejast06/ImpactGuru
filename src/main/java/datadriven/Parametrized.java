@@ -5,13 +5,11 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import testdata.Xls_Reader;
-
 import java.util.concurrent.TimeUnit;
 
 public class Parametrized {
 
     public static void main(String[] args){
-
 
         WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
@@ -45,13 +43,6 @@ public class Parametrized {
             driver.findElement(By.xpath("//input[@id='datepicker']")).sendKeys(date);
             driver.findElement(By.xpath("//input[@id='datepicker']")).clear();
         }
-
-
-
-
-
-
-
-        }
+    }
     }
 
