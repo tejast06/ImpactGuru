@@ -6,6 +6,8 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -26,8 +28,21 @@ public class TestBase {
 
     public  static void initialization(){
 
-        WebDriverManager.chromedriver().setup();
-        driver= new ChromeDriver();
+        if (prop.getProperty("browser").equalsIgnoreCase("chrome")){
+            WebDriverManager.chromedriver().setup();
+            driver= new ChromeDriver();
+
+        }
+        else if(prop.getProperty("browser").equalsIgnoreCase("firefox")){
+            WebDriverManager.firefoxdriver().setup();
+            driver = new FirefoxDriver();
+        }
+
+        else if(prop.getProperty("browser").equalsIgnoreCase("edge")){
+            WebDriverManager.edgedriver().setup();
+            driver = new EdgeDriver();
+        }
+
         driver.get(prop.getProperty("url"));
         driver.manage().window().maximize();
         driver.manage().deleteAllCookies();
@@ -39,4 +54,8 @@ public class TestBase {
         File file = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
         FileUtils.copyFile(file,new File("C:\\Users\\impac\\Downloads\\ImpactGuru\\src\\main\\java\\screenshot\\"+methodName+".jpeg"));
     }
+
+
+
+
 }
