@@ -6,10 +6,6 @@ import java.io.IOException;
 
 public class BrowseFundRaiser extends TestBase  {
 
-
-
-
-
     public BrowseFundRaiser() throws IOException {
         super();
     }
