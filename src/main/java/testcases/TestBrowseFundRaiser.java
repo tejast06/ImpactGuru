@@ -36,6 +36,7 @@ public class TestBrowseFundRaiser extends TestBase implements TestDataImpactGuru
 
     @Test(priority = 2)
     public void validateBrowseFundRaiserTitle(){
+        System.out.println(driver.getTitle());
         Assert.assertTrue(browseFundRaiser.getTitle().equals(browseFundTitle),"Browser Fund Raise title" +
                 "page is not displayed");
     }

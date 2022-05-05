@@ -54,8 +54,4 @@ public class TestBase {
         File file = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
         FileUtils.copyFile(file,new File("C:\\Users\\impac\\Downloads\\ImpactGuru\\src\\main\\java\\screenshot\\"+methodName+".jpeg"));
     }
-
-
-
-
 }

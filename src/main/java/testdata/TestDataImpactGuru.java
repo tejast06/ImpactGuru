@@ -8,5 +8,5 @@ public interface TestDataImpactGuru {
     String number = "1234569870";
     String cause = "Medical";
 
-    String browseFundTitle = "Donors trust ImpactGuru | Best fundraising site";
+    String browseFundTitle = "Raise A Fund | Start Fundraising | How to Create fundraise Online";
 }
