@@ -7,6 +7,5 @@ public interface TestDataImpactGuru {
     String email = "test@gmail.com";
     String number = "1234569870";
     String cause = "Medical";
-
     String browseFundTitle = "Raise A Fund | Start Fundraising | How to Create fundraise Online";
 }

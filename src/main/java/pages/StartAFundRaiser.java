@@ -32,12 +32,9 @@ public class StartAFundRaiser extends TestBase {
         email.sendKeys(emailID);
         mobileNum.sendKeys(num);
     }
-
-
-
     public void selectCause(String cause) throws InterruptedException {
 
-        driver.findElement(By.xpath("//div[text()='Medical]'")).click();
+        driver.findElement(By.xpath("//div[text()='Medical']'")).click();
 
         driver.findElement(By.xpath("//div[text()='"+cause+"']")).click();
     }

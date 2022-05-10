@@ -1,5 +1,3 @@
-package testcases;
-
 import base.TestBase;
 import listeners.CustomListeners;
 import org.testng.Assert;
@@ -65,6 +63,4 @@ public class TestCase1 extends TestBase implements TestDataImpactGuru {
     public void closeTheBrowser() throws IOException {
         driver.quit();
     }
-
-
 }

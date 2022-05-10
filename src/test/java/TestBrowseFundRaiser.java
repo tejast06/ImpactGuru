@@ -1,5 +1,3 @@
-package testcases;
-
 import base.TestBase;
 import listeners.CustomListeners;
 import org.testng.Assert;

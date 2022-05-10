@@ -6,7 +6,7 @@
     <groups>
     </groups>
     <test started-at="2022-04-27T12:53:44 IST" name="Default test" finished-at="2022-04-27T12:53:53 IST" duration-ms="9364">
-      <class name="testcases.TestCase1">
+      <class name="TestCase1">
         <test-method is-config="true" signature="setUp()[pri:0, instance:testcases.TestCase1@2145b572]" started-at="2022-04-27T12:53:44 IST" name="setUp" finished-at="2022-04-27T12:53:49 IST" duration-ms="4609" status="PASS">
           <reporter-output>
           </reporter-output>
@@ -23,7 +23,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validatePageTitle -->
-      </class> <!-- testcases.TestCase1 -->
+      </class> <!-- TestCase1 -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
