@@ -31,7 +31,6 @@ public class TestBase {
         if (prop.getProperty("browser").equalsIgnoreCase("chrome")){
             WebDriverManager.chromedriver().setup();
             driver= new ChromeDriver();
-
         }
         else if(prop.getProperty("browser").equalsIgnoreCase("firefox")){
             WebDriverManager.firefoxdriver().setup();
