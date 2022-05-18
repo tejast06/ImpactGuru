@@ -19,10 +19,12 @@ public class TestBase {
 
     public static WebDriver driver;
     public static Properties prop;
+    String path = System.getProperty("user.dir");
 
     public TestBase() throws IOException {
         prop = new Properties();
-        FileInputStream file = new FileInputStream("C:\\Users\\impac\\Downloads\\ImpactGuru\\src\\main\\java\\config\\config.properties");
+
+        FileInputStream file = new FileInputStream(path+"\\src\\main\\java\\config\\config.properties");
         prop.load(file);
     }
 
@@ -51,7 +53,7 @@ public class TestBase {
 
     public void getFailedScreenShot(String methodName) throws IOException {
         File file = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-        FileUtils.copyFile(file,new File("C:\\Users\\impac\\Downloads\\ImpactGuru\\src\\main\\java\\screenshot\\"+methodName+".jpeg"));
+        FileUtils.copyFile(file,new File(path+"\\src\\main\\java\\screenshot\\"+methodName+".jpeg"));
 
     }
 }
