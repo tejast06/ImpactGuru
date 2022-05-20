@@ -8,7 +8,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -54,6 +53,5 @@ public class TestBase {
     public void getFailedScreenShot(String methodName) throws IOException {
         File file = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
         FileUtils.copyFile(file,new File(path+"\\src\\main\\java\\screenshot\\"+methodName+".jpeg"));
-
     }
 }

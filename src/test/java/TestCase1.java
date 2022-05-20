@@ -17,9 +17,11 @@ public class TestCase1 extends TestBase implements TestDataImpactGuru {
 
     public HomePage homePage;
     public StartAFundRaiser startAFundRaiser;
+
     public TestCase1() throws IOException {
         super();
     }
+
     @BeforeTest
     public void setUp() throws IOException {
 

@@ -1,6 +1,7 @@
 package pages;
 
 import base.TestBase;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -19,6 +20,9 @@ public class HomePage extends TestBase {
 
     @FindBy(xpath = "//a[text()='How it Works']")
     WebElement howItWorks;
+
+    @FindBy(xpath="//h2[text()='Our Partners']")
+    WebElement ourPartner;
 
     public HomePage() throws IOException {
         super();
@@ -81,5 +85,11 @@ public class HomePage extends TestBase {
     public BrowseFundRaiser clickBrowseFundRaiser() throws IOException {
         browserFundRaiser.click();
         return new BrowseFundRaiser();
+    }
+
+    public boolean isOurPartnerDisplay(){
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("arguments[0].scrollIntoView();", ourPartner);
+        return ourPartner.isDisplayed();
     }
 }
