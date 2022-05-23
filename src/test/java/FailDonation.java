@@ -51,5 +51,6 @@ public class FailDonation extends TestBase implements TestDataImpactGuru {
         log.info("Click on Donate button, enter Name:"+name+", Email:"+email+",Number:"+number+" and City:"+city+"");
         transactionDetails = browseFundRaiser.clickDonateAndEnterDetails(name,email,number,city);
         Thread.sleep(2000);
+
     }
 }
