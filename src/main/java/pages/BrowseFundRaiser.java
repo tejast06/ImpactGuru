@@ -13,11 +13,6 @@ import java.util.Iterator;
 import java.util.Set;
 
 public class BrowseFundRaiser extends TestBase  {
-
-    public TransactionDetails transactionDetails;
-
-    public  String newWindow;
-
     @FindBy(xpath = "//a[text()=  ' DONATE']")
     WebElement donateBtn;
 

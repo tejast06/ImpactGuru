@@ -35,6 +35,8 @@ public class FailDonation extends TestBase implements TestDataImpactGuru {
         initialization();
         homePage = new HomePage();
         browseFundRaiser = new BrowseFundRaiser();
+
+
     }
 
     @Test(priority = 1)
@@ -50,14 +52,4 @@ public class FailDonation extends TestBase implements TestDataImpactGuru {
         transactionDetails = browseFundRaiser.clickDonateAndEnterDetails(name,email,number,city);
         Thread.sleep(2000);
     }
-
-
-
-
-
-
-
-
-
-
 }

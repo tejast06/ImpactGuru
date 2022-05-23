@@ -27,7 +27,7 @@ public class HomePage extends TestBase {
     @FindBy(css = "[type='text']")
     WebElement searchField;
 
-    @FindBy(xpath = "//i[@class='fa fa-search']")
+    @FindBy(xpath = "//button[@id='nav-search-btn']")
     WebElement searchBtn;
 
     public HomePage() throws IOException {
