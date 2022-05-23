@@ -8,4 +8,8 @@ public interface TestDataImpactGuru {
     String number = "1234569870";
     String cause = "Medical";
     String browseFundTitle = "Raise A Fund | Start Fundraising | How to Create fundraise Online";
+
+    String searchText = "Sudheer Needs Your Support";
+
+    String city = "Mumbai";
 }

@@ -5,6 +5,7 @@
         <classes>
             <class name="TestCase1"/>
             <class name="TestBrowseFundRaiser"></class>
+            <class name="ValidatePartners"></class>
         </classes>
     </test>
 </suite>

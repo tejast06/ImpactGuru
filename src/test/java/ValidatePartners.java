@@ -23,6 +23,11 @@ public class ValidatePartners extends TestBase {
     }
 
     @Test(priority = 1)
+    public void validateSearchFieldIsDisplay(){
+        Assert.assertTrue(homePage.isSearchFieldDisplayed());
+    }
+
+    @Test(priority = 2)
     public void validateOurPartnerIsDisplay() throws InterruptedException {
         Thread.sleep(5000);
         Assert.assertTrue(homePage.isOurPartnerDisplay());

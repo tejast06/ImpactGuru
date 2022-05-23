@@ -24,6 +24,12 @@ public class HomePage extends TestBase {
     @FindBy(xpath="//h2[text()='Our Partners']")
     WebElement ourPartner;
 
+    @FindBy(css = "[type='text']")
+    WebElement searchField;
+
+    @FindBy(xpath = "//i[@class='fa fa-search']")
+    WebElement searchBtn;
+
     public HomePage() throws IOException {
         super();
         PageFactory.initElements(driver,this);
@@ -91,5 +97,17 @@ public class HomePage extends TestBase {
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("arguments[0].scrollIntoView();", ourPartner);
         return ourPartner.isDisplayed();
+    }
+
+    public boolean isSearchFieldDisplayed(){
+        return searchField.isDisplayed();
+    }
+
+    public BrowseFundRaiser enterTextOnFieldAncClick(String searchText) throws InterruptedException, IOException {
+        searchField.sendKeys(searchText);
+        Thread.sleep(2000);
+        searchBtn.click();
+        return new BrowseFundRaiser();
+
     }
 }
