@@ -3,7 +3,6 @@
 <suite name="Impact Guru" verbose="10" parallel="true" thread-count="2" >
     <test name="Failed donation and Create fund raiser">
         <classes>
-            <class name="TEST.TestCreateFundRaiser"></class>
             <class name="FailDonation"></class>
         </classes>
     </test>
