@@ -1,5 +1,7 @@
 import base.TestBase;
+import listeners.CustomListeners;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import pages.HomePage;
 import pages.StartANewFundRaiser;
@@ -7,6 +9,7 @@ import testdata.TestDataImpactGuru;
 
 import java.io.IOException;
 
+@Listeners(CustomListeners.class)
 public class TestCreateFundRaiser extends TestBase implements TestDataImpactGuru {
 
     public TestCreateFundRaiser() throws IOException {
