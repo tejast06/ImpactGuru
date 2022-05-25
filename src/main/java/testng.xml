@@ -4,6 +4,7 @@
     <test name="Failed donation and Create fund raiser">
         <classes>
             <class name="FailDonation"></class>
+            <class name="TestFundRaiser"></class>
         </classes>
     </test>
 </suite>
