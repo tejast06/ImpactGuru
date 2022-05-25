@@ -35,9 +35,7 @@ public class FailDonation extends TestBase implements TestDataImpactGuru {
         initialization();
         homePage = new HomePage();
         browseFundRaiser = new BrowseFundRaiser();
-
-
-    }
+     }
 
     @Test(priority = 1)
     public void validateSearchFunctionality() throws InterruptedException, IOException {
@@ -49,7 +47,7 @@ public class FailDonation extends TestBase implements TestDataImpactGuru {
     @Test(priority = 2)
     public void failDonation() throws InterruptedException, IOException {
         log.info("Click on Donate button, enter Name:"+name+", Email:"+email+",Number:"+number+" and City:"+city+"");
-        transactionDetails = browseFundRaiser.clickDonateAndEnterDetails(name,email,number,city);
+        transactionDetails = browseFundRaiser.clickDonateAndEnterDetailsAndValidateDonationGetsFailed(name,email,number,city);
         Thread.sleep(2000);
 
     }

@@ -41,7 +41,7 @@ public class BrowseFundRaiser extends TestBase  {
      * @throws IOException
      * @throws InterruptedException
      */
-    public TransactionDetails clickDonateAndEnterDetails(String name,String emailId,String phone,String city) throws IOException, InterruptedException {
+    public TransactionDetails clickDonateAndEnterDetailsAndValidateDonationGetsFailed(String name,String emailId,String phone,String city) throws IOException, InterruptedException {
 
         donateBtn.click();
         Thread.sleep(5000);
