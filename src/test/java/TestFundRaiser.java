@@ -21,7 +21,7 @@ public class TestFundRaiser extends TestBase implements TestDataImpactGuru {
         homePage = new HomePage();
     }
 
-    @Test
+    @Test(enabled = false)
     public void createFundRaiser() throws IOException, InterruptedException {
 
         //step1
@@ -33,6 +33,7 @@ public class TestFundRaiser extends TestBase implements TestDataImpactGuru {
 
         //step3
         startANewFundRaiser.enterDetails(name,emailid,number);
+        Thread.sleep(3000);
 
         //step4
         startANewFundRaiser.whoAreYouRaisingFundFor(parent);
@@ -40,12 +41,14 @@ public class TestFundRaiser extends TestBase implements TestDataImpactGuru {
         //step5
         startANewFundRaiser.setPatientDetails(name,age,male,number,city);
 
+        //step6
+        startANewFundRaiser.setCampaignDetails(disease,amt,date);
 
+        startANewFundRaiser.setHospitalizationStatus(status,hospitalName);
 
+        startANewFundRaiser.clickUnlock100More();
 
-
-
-
+        startANewFundRaiser.uploadDocument();
 
 
     }
