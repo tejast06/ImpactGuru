@@ -110,4 +110,10 @@ public class HomePage extends TestBase {
         return new BrowseFundRaiser();
 
     }
+
+    public StartANewFundRaiser clickFundRaiser() throws IOException, InterruptedException {
+        fundRaiser.click();
+        return new StartANewFundRaiser();
+
+    }
 }
