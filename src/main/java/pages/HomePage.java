@@ -5,12 +5,14 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import testdata.TestDataImpactGuru;
 
 import java.io.IOException;
 
-public class HomePage extends TestBase {
+public class HomePage extends TestBase implements TestDataImpactGuru {
 
-    public StartAFundRaiser startAFundRaiser;
+    public StartAOldFundRaiser startAOldFundRaiser;
+    public StartAFundRaiser startANewFundRaiser;
 
     @FindBy(xpath="//a[text()='Start a free fundraiser']")
     WebElement fundRaiser;
@@ -41,9 +43,9 @@ public class HomePage extends TestBase {
      * @return
      * @throws IOException
      */
-    public StartAFundRaiser clickOnFundRaiser() throws IOException {
+    public StartAOldFundRaiser clickOnFundRaiser() throws IOException {
         fundRaiser.click();
-        return new StartAFundRaiser();
+        return new StartAOldFundRaiser();
     }
 
     /**
@@ -108,12 +110,10 @@ public class HomePage extends TestBase {
         Thread.sleep(2000);
         searchBtn.click();
         return new BrowseFundRaiser();
-
     }
 
-    public StartANewFundRaiser clickFundRaiser() throws IOException, InterruptedException {
-        fundRaiser.click();
-        return new StartANewFundRaiser();
 
-    }
+
+
+
 }

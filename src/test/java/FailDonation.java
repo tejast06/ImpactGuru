@@ -11,6 +11,7 @@ import pages.HomePage;
 import pages.TransactionDetails;
 import testdata.TestDataImpactGuru;
 
+import java.awt.*;
 import java.io.IOException;
 
 @Listeners(CustomListeners.class)
@@ -30,7 +31,7 @@ public class FailDonation extends TestBase implements TestDataImpactGuru {
     }
 
     @BeforeTest
-    public void setUp() throws IOException {
+    public void setUp() throws IOException, AWTException {
         log.info("Launch the browser");
         initialization();
         homePage = new HomePage();

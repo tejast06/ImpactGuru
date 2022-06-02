@@ -1,5 +1,7 @@
 package testdata;
 
+import org.apache.commons.lang3.RandomStringUtils;
+
 public interface TestDataImpactGuru {
 
     String expectedTitle = "Crowdfunding in India: Best Fundraising Platform Online | ImpactGuru";
@@ -17,13 +19,27 @@ public interface TestDataImpactGuru {
 
     String parent = "Parent";
 
-    String emailid = "automation34@gmail.com";
+    String randomString = RandomStringUtils.randomAlphabetic(5);
+    String emailid = "testautomation"+randomString+"@gmail.com";
+
 
     String mySelf = "Myself";
 
     String age = "40";
 
     String male = "Male";
+
+    String disease = "Sanity";
+    String amt = "50000";
+    String date = "12122022";
+
+    String status = "Admitted";
+
+    String hospitalName = "7hills";
+
+    String patientName = "Test";
+    String healthIssue= "Sanity";
+
 
 
 

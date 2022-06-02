@@ -75,14 +75,4 @@ public class BrowseFundRaiser extends TestBase  {
         Assert.assertTrue(failureMsg.contains("Failure. Transaction not attempted"));
         return new TransactionDetails();
     }
-
-
-
-
-
-
-
-
-
-
 }
