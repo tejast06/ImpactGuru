@@ -1,13 +1,10 @@
 package base;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.edge.EdgeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -29,19 +26,21 @@ public class TestBase {
 
     public  static void initialization(){
 
-        if (prop.getProperty("browser").equalsIgnoreCase("chrome")){
-            WebDriverManager.chromedriver().setup();
-            driver= new ChromeDriver();
-        }
-        else if(prop.getProperty("browser").equalsIgnoreCase("firefox")){
-            WebDriverManager.firefoxdriver().setup();
-            driver = new FirefoxDriver();
-        }
+        System.setProperty("webdriver.chrome.driver", " /usr/bin/chromedriver/chromedriver.exe");
 
-        else if(prop.getProperty("browser").equalsIgnoreCase("edge")){
-            WebDriverManager.edgedriver().setup();
-            driver = new EdgeDriver();
-        }
+//        if (prop.getProperty("browser").equalsIgnoreCase("chrome")){
+//            WebDriverManager.chromedriver().setup();
+//            driver= new ChromeDriver();
+//        }
+//        else if(prop.getProperty("browser").equalsIgnoreCase("firefox")){
+//            WebDriverManager.firefoxdriver().setup();
+//            driver = new FirefoxDriver();
+//        }
+//
+//        else if(prop.getProperty("browser").equalsIgnoreCase("edge")){
+//            WebDriverManager.edgedriver().setup();
+//            driver = new EdgeDriver();
+//        }
 
         driver.get(prop.getProperty("url"));
         driver.manage().window().maximize();
