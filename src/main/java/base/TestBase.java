@@ -43,6 +43,7 @@ public class TestBase {
 //        }
 
         driver.get("https://whitehat:aUV9NLtDZaVqLAjN@whitehat.impactguru.com/");
+
         driver.manage().window().maximize();
         driver.manage().deleteAllCookies();
         driver.manage().timeouts().pageLoadTimeout(45, TimeUnit.SECONDS);
