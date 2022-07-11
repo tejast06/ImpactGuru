@@ -26,7 +26,7 @@ public class TestBase {
 
     public  static void initialization(){
 
-        System.setProperty("webdriver.chrome.driver", " /usr/bin/chromedriver/chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "/usr/bin/google-chrome");
 
             //WebDriverManager.chromedriver().setup();
             driver= new ChromeDriver();
