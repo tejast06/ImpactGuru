@@ -4,9 +4,9 @@ import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
@@ -18,29 +18,20 @@ public class TestBase {
     String path = System.getProperty("user.dir");
 
     public TestBase() throws IOException {
-        prop = new Properties();
+//        prop = new Properties();
 
-        FileInputStream file = new FileInputStream(path+"\\src\\main\\java\\config\\config.properties");
-        prop.load(file);
+        //FileInputStream file = new FileInputStream(path+"\\src\\main\\java\\config\\config.properties");
+        //prop.load(file);
     }
 
     public  static void initialization(){
 
         System.setProperty("webdriver.chrome.driver", " /usr/bin/chromedriver/chromedriver.exe");
 
-//        if (prop.getProperty("browser").equalsIgnoreCase("chrome")){
-//            WebDriverManager.chromedriver().setup();
-//            driver= new ChromeDriver();
-//        }
-//        else if(prop.getProperty("browser").equalsIgnoreCase("firefox")){
-//            WebDriverManager.firefoxdriver().setup();
-//            driver = new FirefoxDriver();
-//        }
-//
-//        else if(prop.getProperty("browser").equalsIgnoreCase("edge")){
-//            WebDriverManager.edgedriver().setup();
-//            driver = new EdgeDriver();
-//        }
+            //WebDriverManager.chromedriver().setup();
+            driver= new ChromeDriver();
+
+
 
         driver.get("https://whitehat:aUV9NLtDZaVqLAjN@whitehat.impactguru.com/");
 
